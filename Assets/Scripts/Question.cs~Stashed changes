@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+[CreateAssetMenu(fileName = "SingleQuestion", menuName = "Questions", order = 1)]
+public class Question : ScriptableObject
+{
+    [TextArea(10, 10)]
+    public string questionfield;
+    public string[] answers;    
+}
