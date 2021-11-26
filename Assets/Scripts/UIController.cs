@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.InputSystem;
 
 public class UIController : MonoBehaviour
 {
@@ -26,9 +26,7 @@ public class UIController : MonoBehaviour
 
     public void Update()
     {
-        var root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
-        textField = root.Q<TextField>("AnswerUI").value;
-        Debug.Log(textField);
+
     }
     /*
     void StartButtonPressed()
@@ -40,4 +38,13 @@ public class UIController : MonoBehaviour
        messageText.style.display = DisplayStyle.Flex;
     }
     */
+
+    public void OnEnter()
+    {
+        var root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
+        textField = root.Q<TextField>("AnswerUI").value;
+        Debug.Log(textField);
+    }
+
+    //public 
 }
