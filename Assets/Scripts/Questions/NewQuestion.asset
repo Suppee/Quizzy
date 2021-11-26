@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7706a705d0a0864c9c4936d6022d70f, type: 3}
-  m_Name: VikingQuestion1
+  m_Script: {fileID: 11500000, guid: 05a992f104cbed9469401b66226c6d1e, type: 3}
+  m_Name: NewQuestion
   m_EditorClassIdentifier: 
-  questionfield: 
+  question: Hvad hedder jeg?
   answers:
-  - 
-  - 
-  - 
+  - Mads
+  - Christian
+  - Anders
