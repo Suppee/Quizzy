@@ -7,5 +7,5 @@ public class Question : ScriptableObject
 {
     [TextArea(10, 100)]
     public string question;
-    public string[] answers;
+    public string[] answers;    
 }

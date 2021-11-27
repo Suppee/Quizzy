@@ -15,11 +15,7 @@ public class UIController : MonoBehaviour
     public void Start()
     {
         var root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
-    }
-
-    public void Update()
-    {
-
+        root.Q<Label>("Question").text = questionRef.question;
     }
 
     public void OnEnter()
