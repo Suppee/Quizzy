@@ -49,6 +49,17 @@
                 },
                 {
                     "name": "",
+                    "id": "28055fed-785d-4c33-8ae4-4f92162b78f7",
+                    "path": "<Touchscreen>/primaryTouch/indirectTouch",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4a38995c-b93f-4b0e-ada4-1769910e8994",
                     "path": "",
                     "interactions": "",
@@ -79,6 +90,17 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
                     "isOptional": false,
                     "isOR": false
                 }

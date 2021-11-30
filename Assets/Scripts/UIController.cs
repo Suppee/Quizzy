@@ -8,8 +8,9 @@ using UnityEngine.InputSystem;
 public class UIController : MonoBehaviour
 {
     public GameObject UIDocument;
-    public string textField;
+    private string textField;
     public Question questionRef;
+    int points = 0;
 
     // Start is called before the first frame update
     public void Start()
@@ -21,8 +22,18 @@ public class UIController : MonoBehaviour
     public void OnEnter()
     {
         var root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
-        textField = root.Q<TextField>("AnswerUI").value;
-        Debug.Log(textField);
+        textField = root.Q<TextField>("AnswerUI").value;        
         root.Q<TextField>("AnswerUI").value = "";
+        for(int i = 0; i < questionRef.answers.Length; i++)
+        {
+            if (textField == questionRef.answers[i])
+            {
+                points = points + questionRef.answers[i].Length;
+                root.Q<Label>("Points").text = points.ToString();
+            }
+                
+
+        }
+        
     }
 }
