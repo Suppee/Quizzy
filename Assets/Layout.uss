@@ -1,12 +1,16 @@
 .textfield {
-    background-color: rgba(118, 123, 145, 255);
-    border-left-color: rgba(118, 123, 145, 255);
-    border-right-color: rgba(118, 123, 145, 255);
-    border-top-color: rgba(118, 123, 145, 255);
-    border-bottom-color: rgba(118, 123, 145, 255);
-    -unity-background-image-tint-color: rgba(118, 123, 145, 255);
+    background-color: rgb(63, 120, 76);
+    border-left-color: rgb(63, 120, 76);
+    border-right-color: rgb(63, 120, 76);
+    border-top-color: rgb(63, 120, 76);
+    border-bottom-color: rgb(63, 120, 76);
+    -unity-background-image-tint-color: rgb(118, 123, 145);
 }
 
 .textfield > .unity-base-field_label {
-    background-color: rgba(118, 123, 145, 255);
+    background-color: rgb(63, 120, 76);
+    border-left-color: rgba(63, 120, 76, 255);
+    border-right-color: rgba(63, 120, 76, 255);
+    border-top-color: rgba(63, 120, 76, 255);
+    border-bottom-color: rgba(63, 120, 76, 255);
 }

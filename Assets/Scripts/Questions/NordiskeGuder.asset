@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a992f104cbed9469401b66226c6d1e, type: 3}
   m_Name: NordiskeGuder
   m_EditorClassIdentifier: 
-  question: "N\xE6vn nordiske guder"
+  question: "N\xE6vn nordiske guder der muligvis levede engang"
   answers:
   - Thor
   - Odin

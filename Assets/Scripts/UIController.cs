@@ -29,7 +29,7 @@ public class UIController : MonoBehaviour
             if (textField == questionRef.answers[i])
             {
                 points = points + questionRef.answers[i].Length;
-                root.Q<Label>("Points").text = points.ToString();
+                root.Q<Label>("Points").text = "Score: " + points.ToString();
             }
                 
 
