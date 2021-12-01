@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d69248bcf25894297e14fc76cb9285, type: 3}
   m_Name: DanskQuiz
   m_EditorClassIdentifier: 
-  questions: []
+  questions:
+  - {fileID: 11400000, guid: 012abf9e1683a7848af489b09a94e599, type: 2}

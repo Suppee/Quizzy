@@ -264,6 +264,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIDocument: {fileID: 1771203063}
   questionRef: {fileID: 11400000, guid: 012abf9e1683a7848af489b09a94e599, type: 2}
+  quizRef:
+  - {fileID: 11400000, guid: 012abf9e1683a7848af489b09a94e599, type: 2}
+  - {fileID: 11400000, guid: 6f9f04fbe9ebc954e872b37480fa5d80, type: 2}
 --- !u!114 &726609474
 MonoBehaviour:
   m_ObjectHideFlags: 0
