@@ -1,5 +1,12 @@
 .textfield {
+    background-color: rgba(118, 123, 145, 255);
+    border-left-color: rgba(118, 123, 145, 255);
+    border-right-color: rgba(118, 123, 145, 255);
+    border-top-color: rgba(118, 123, 145, 255);
+    border-bottom-color: rgba(118, 123, 145, 255);
+    -unity-background-image-tint-color: rgba(118, 123, 145, 255);
 }
 
 .textfield > .unity-base-field_label {
+    background-color: rgba(118, 123, 145, 255);
 }
