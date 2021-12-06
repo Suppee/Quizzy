@@ -132,10 +132,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170061703}
+  - component: {fileID: 170061704}
   m_Layer: 0
-  m_Name: StackController
+  m_Name: StackSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -147,13 +148,30 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170061702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &170061704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170061702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeace137ae095648b4bf79ec3f73bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StackCube: {fileID: 18515049434290527, guid: 194579d23cd23464fa8906eeef6aa5ff, type: 3}
+  Camera: {fileID: 963194225}
+  StackSpawnTransform: {fileID: 170061703}
+  spawnStack: 0
+  spawnAmount: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +316,7 @@ MonoBehaviour:
   quizRef:
   - {fileID: 11400000, guid: 012abf9e1683a7848af489b09a94e599, type: 2}
   - {fileID: 11400000, guid: 6f9f04fbe9ebc954e872b37480fa5d80, type: 2}
+  StackSpawner: {fileID: 170061704}
 --- !u!114 &726609474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.48, z: -18.34}
+  m_LocalPosition: {x: 0, y: 3.5, z: -18.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
