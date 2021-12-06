@@ -48,7 +48,7 @@ public class UIController : MonoBehaviour
         {
             yield return new WaitForSeconds(1);
             counter--;
-            root.Q<Label>("Time").text = counter.ToString(); 
+            root.Q<Label>("Time").text = "Time: " + counter.ToString(); 
         }
         questionRef = quizRef[Random.Range(0, quizRef.Length)];
         StartQuestion();
