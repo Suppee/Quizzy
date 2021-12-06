@@ -17,19 +17,31 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        //Set root to UIDocumentation, neccessary to access the UI elements
         root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
+
+        //Starts a question at the beginning of the game
         StartQuestion();        
     }
 
     public void OnEnter()
     {        
-        textField = root.Q<TextField>("AnswerUI").value;        
+        // Stores the textfield string as a variable
+        textField = root.Q<TextField>("AnswerUI").value;  
+
+        // Clears textfield after enter
         root.Q<TextField>("AnswerUI").value = "";
+
+        // loops for each possible answer from the question ref.
         for(int i = 0; i < questionRef.answers.Length; i++)
         {
+            //Check if the textfield answer equals the answer at index I
             if (textField == questionRef.answers[i])
             {
+                //Add points according to length of correct answer
                 points = points + questionRef.answers[i].Length;
+
+                //Show score in score UI
                 root.Q<Label>("Points").text = "Score: " + points.ToString();
             }
         }        
@@ -37,21 +49,33 @@ public class UIController : MonoBehaviour
 
     public void StartQuestion()
     {
+        // Set question field text to the new question
         root.Q<Label>("Question").text = questionRef.question;
+
+        // Start countdown Coroutine
         StartCoroutine(Countdown());
     }  
 
     public IEnumerator Countdown()
     {
+        // Set time counter to questions preset time
         int counter = questionRef.seconds;
+        // Loop as long as time is not below 0
         while (counter > 0)
         {
+            // Wait one second
             yield return new WaitForSeconds(1);
+
+            // Remove one from counter
             counter--;
+
+            //Show counter number in the Time UI element
             root.Q<Label>("Time").text = "Time: " + counter.ToString(); 
         }
         //Chooses a random question after time is over
         questionRef = quizRef[Random.Range(0, quizRef.Length)];
+        
+        // Start the function StartQuestion
         StartQuestion();
     }
 }
