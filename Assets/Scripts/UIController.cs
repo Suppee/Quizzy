@@ -50,6 +50,7 @@ public class UIController : MonoBehaviour
             counter--;
             root.Q<Label>("Time").text = "Time: " + counter.ToString(); 
         }
+        //Chooses a random question after time is over
         questionRef = quizRef[Random.Range(0, quizRef.Length)];
         StartQuestion();
     }
