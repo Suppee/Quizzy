@@ -12,6 +12,8 @@ public class StackSpawner : MonoBehaviour
     public bool spawnStack = false;
     public float spawnAmount;
     private VisualElement root;
+    int points = 1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,22 +27,23 @@ public class StackSpawner : MonoBehaviour
     {
         if (spawnStack == true)
         {
+            
             Camera.transform.position += new Vector3(0, StackCube.transform.localScale.y * Time.deltaTime, 0);
         }
         
     }
 
     public IEnumerator StackLoop()
-    {
-        int points = 0;
-        spawnStack = true;
+    {        
+        spawnStack = true;       
         for (int i = 0; i < spawnAmount; i++)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1);            
+            root.Q<Label>("Points").text = "Score: " + points++;
+            Debug.Log(points);
             Instantiate(StackCube, StackSpawnTransform.position, StackSpawnTransform.rotation);
             transform.position += new Vector3(0, StackCube.transform.localScale.y, 0);
-            root.Q<Label>("Points").text = "Score: " + points++ ;
-        }
+        }       
         spawnStack = false;
     }
 }

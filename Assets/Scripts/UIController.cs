@@ -39,7 +39,7 @@ public class UIController : MonoBehaviour
             if (textField == questionRef.answers[i])
             {
                 //Activates stackSpawner
-                StackSpawner.spawnAmount = questionRef.answers[i].Length;
+                StackSpawner.spawnAmount += questionRef.answers[i].Length;
                 if (StackSpawner.spawnStack == false)
                 {
                     StackSpawner.StartCoroutine(StackSpawner.StackLoop());
@@ -54,10 +54,10 @@ public class UIController : MonoBehaviour
         root.Q<Label>("Question").text = questionRef.question;
 
         // Start countdown Coroutine
-        StartCoroutine(Countdown());
+        StartCoroutine(CountdownTimer());
     }  
 
-    public IEnumerator Countdown()
+    public IEnumerator CountdownTimer()
     {
         // Set time counter to questions preset time
         int counter = questionRef.seconds;
