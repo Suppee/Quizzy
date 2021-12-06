@@ -10,8 +10,7 @@ public class UIController : MonoBehaviour
     public GameObject UIDocument;
     private string textField;
     public Question questionRef;
-    public Question[] quizRef;
-    int points = 0;
+    public Question[] quizRef;   
     private VisualElement root;
     public StackSpawner StackSpawner;
 
@@ -44,13 +43,7 @@ public class UIController : MonoBehaviour
                 if (StackSpawner.spawnStack == false)
                 {
                     StackSpawner.StartCoroutine(StackSpawner.StackLoop());
-                }
-
-                //Add points according to length of correct answer
-                points = points + questionRef.answers[i].Length;
-
-                //Show score in score UI
-                root.Q<Label>("Points").text = "Score: " + points.ToString();
+                }              
             }
         }        
     }
