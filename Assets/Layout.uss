@@ -9,8 +9,35 @@
 
 .textfield > .unity-base-field_label {
     background-color: rgb(63, 120, 76);
-    border-left-color: rgba(63, 120, 76, 255);
-    border-right-color: rgba(63, 120, 76, 255);
-    border-top-color: rgba(63, 120, 76, 255);
-    border-bottom-color: rgba(63, 120, 76, 255);
+    border-left-color: rgb(63, 120, 76);
+    border-right-color: rgb(63, 120, 76);
+    border-top-color: rgb(63, 120, 76);
+    border-bottom-color: rgb(63, 120, 76);
+}
+
+.labelsetup {
+    -unity-text-align: middle-center;
+    height: 30px;
+    top: -400%;
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(63, 120, 76);
+    -unity-background-image-tint-color: rgb(248, 168, 168);
+    background-color: rgba(255, 255, 255, 0.09);
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-color: rgba(255, 255, 255, 0.24);
+    border-right-color: rgba(255, 255, 255, 0.24);
+    border-top-color: rgba(255, 255, 255, 0.24);
+    border-bottom-color: rgba(255, 255, 255, 0.24);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
 }
