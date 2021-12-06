@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public Question[] quizRef;
     int points = 0;
     private VisualElement root;
+    public StackSpawner StackSpawner;
 
     // Start is called before the first frame update
     public void Start()
@@ -38,6 +39,13 @@ public class UIController : MonoBehaviour
             //Check if the textfield answer equals the answer at index I
             if (textField == questionRef.answers[i])
             {
+                //Activates stackSpawner
+                StackSpawner.spawnAmount = questionRef.answers[i].Length;
+                if (StackSpawner.spawnStack == false)
+                {
+                    StackSpawner.StartCoroutine(StackSpawner.StackLoop());
+                }
+
                 //Add points according to length of correct answer
                 points = points + questionRef.answers[i].Length;
 
