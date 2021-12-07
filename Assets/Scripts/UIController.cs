@@ -13,17 +13,35 @@ public class UIController : MonoBehaviour
     public Question[] quizRef;   
     private VisualElement root;
     public StackSpawner StackSpawner;
+    private TouchScreenKeyboard keyboard;
+    public bool cooldown;
 
     // Start is called before the first frame update
     public void Start()
     {
+        cooldown = true;
         //Set root to UIDocumentation, neccessary to access the UI elements
         root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
 
         //Starts a question at the beginning of the game
         StartQuestion();        
     }
+    public void FixedUpdate()
+    {
+        if (TouchScreenKeyboard.visible && cooldown == true)
+        {
+            keyboard = TouchScreenKeyboard.Open("");
+            cooldown = false;
+        }
 
+        if (keyboard.status == TouchScreenKeyboard.Status.Done && keyboard != null)
+        {
+
+            OnEnter();
+            Debug.Log("hej");
+            keyboard = TouchScreenKeyboard.Open("");
+        }
+    }
     public void OnEnter()
     {        
         // Stores the textfield string as a variable
