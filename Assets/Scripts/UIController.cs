@@ -26,22 +26,23 @@ public class UIController : MonoBehaviour
         root = UIDocument.GetComponent<UIDocument>().rootVisualElement;
 
         //Starts a question at the beginning of the game
-        StartQuestion();        
+        StartQuestion();
+        keyboard = TouchScreenKeyboard.Open("");
     }
     public void FixedUpdate()
     {
-        if (TouchScreenKeyboard.visible && cooldown == true)
+        if (TouchScreenKeyboard.visible && cooldown == true && TouchScreenKeyboard.isSupported)
         {
-            keyboard = TouchScreenKeyboard.Open("");
+            //keyboard = TouchScreenKeyboard.Open("");
             cooldown = false;
         }
 
-        if (keyboard.status == TouchScreenKeyboard.Status.Done && keyboard != null)
+        if (keyboard.status == TouchScreenKeyboard.Status.Done && keyboard != null && TouchScreenKeyboard.isSupported)
         {
 
             OnEnter();
             Debug.Log("hej");
-            keyboard = TouchScreenKeyboard.Open("");
+            //keyboard = TouchScreenKeyboard.Open("");
         }
     }
 
