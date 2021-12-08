@@ -23,6 +23,6 @@ public class RandomColor : MonoBehaviour
 
     void disableGravity()
     {
-        if(gameObject.GetComponent<Rigidbody>()) gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 }
