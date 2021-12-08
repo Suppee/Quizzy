@@ -15,6 +15,8 @@ public class UIController : MonoBehaviour
     public StackSpawner StackSpawner;
     private TouchScreenKeyboard keyboard;
     public bool cooldown;
+    public AudioSource CountDown;
+    public AudioSource Buzzer;
 
     // Start is called before the first frame update
     public void Start()
@@ -42,6 +44,7 @@ public class UIController : MonoBehaviour
             keyboard = TouchScreenKeyboard.Open("");
         }
     }
+
     public void OnEnter()
     {        
         // Stores the textfield string as a variable
@@ -92,6 +95,15 @@ public class UIController : MonoBehaviour
 
             //Show counter number in the Time UI element
             root.Q<Label>("Time").text = "Time: " + counter.ToString(); 
+
+            if (counter == 5)
+            {
+                CountDown.Play();
+            }
+            if (counter == 0)
+            {
+                Buzzer.Play();
+            }
         }
         //Chooses a random question after time is over
         questionRef = quizRef[Random.Range(0, quizRef.Length)];
