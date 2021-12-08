@@ -56,8 +56,10 @@ public class UIController : MonoBehaviour
             //Check if the textfield answer equals the answer at index I
             if (textField == questionRef.answers[i])
             {
+                Debug.Log(questionRef.answers[i].Length);
                 //Activates stackSpawner
                 StackSpawner.spawnAmount += questionRef.answers[i].Length;
+                textField = null;
                 if (StackSpawner.spawnStack == false)
                 {
                     StackSpawner.StartCoroutine(StackSpawner.StackLoop());

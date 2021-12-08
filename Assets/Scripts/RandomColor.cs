@@ -10,7 +10,7 @@ public class RandomColor : MonoBehaviour
     {
         Color randomColor = new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f));
         gameObject.GetComponent<Renderer>().material.SetColor("_Color", randomColor);
-        Debug.Log(randomColor);
+        //Debug.Log(randomColor);
         //Disables Grivity after given amount of seconds
         Invoke("disableGravity", disableTime);
     }

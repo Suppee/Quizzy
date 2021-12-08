@@ -40,10 +40,11 @@ public class StackSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(1);            
             root.Q<Label>("Points").text = "Score: " + points++;
-            Debug.Log(points);
+            Debug.Log("spawnamount: "+spawnAmount);
             Instantiate(StackCube, StackSpawnTransform.position, StackSpawnTransform.rotation);
             transform.position += new Vector3(0, StackCube.transform.localScale.y, 0);
         }       
         spawnStack = false;
+        spawnAmount = 0;
     }
 }
