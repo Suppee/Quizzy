@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6930602756124485084}
   - component: {fileID: -134777027777366158}
   - component: {fileID: 6845107438235744512}
-  - component: {fileID: -3462783723243174449}
   m_Layer: 0
   m_Name: StackCube
   m_TagString: Untagged
@@ -130,6 +129,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableTime: 5
+  blockClickSounds:
+  - {fileID: 8300000, guid: 4db6a1e4be99f7c49b6a8bf8af45a076, type: 3}
+  - {fileID: 8300000, guid: 110774892855f8048a05cbcc161d7af9, type: 3}
+  - {fileID: 8300000, guid: 25149cd5869cf9d4e9b74676e8373bb9, type: 3}
+  - {fileID: 8300000, guid: 343574e77c56ef94fab1d4c67ca36550, type: 3}
 --- !u!82 &6845107438235744512
 AudioSource:
   m_ObjectHideFlags: 0
@@ -226,21 +230,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-3462783723243174449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18515049434290527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bef930556815e7488b28b9de648ac19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  randomSound: {fileID: 6845107438235744512}
-  audioSources:
-  - {fileID: 8300000, guid: 4db6a1e4be99f7c49b6a8bf8af45a076, type: 3}
-  - {fileID: 8300000, guid: 110774892855f8048a05cbcc161d7af9, type: 3}
-  - {fileID: 8300000, guid: 25149cd5869cf9d4e9b74676e8373bb9, type: 3}
-  - {fileID: 8300000, guid: 343574e77c56ef94fab1d4c67ca36550, type: 3}

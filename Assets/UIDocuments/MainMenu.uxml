@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Layout.uss?fileID=7433441132597879392&amp;guid=10cb78be5427e694980371b2eb463da8&amp;type=3#Layout" />
     <SafeAreaManager name="SafeAreaManager">
         <ui:Button text="Play" display-tooltip-when-elided="true" name="PlayButton" class="Button" />
         <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="Button" />

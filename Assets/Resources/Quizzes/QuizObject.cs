@@ -4,7 +4,7 @@ using UnityEngine;
 
 
     [CreateAssetMenu(fileName = "NewQuiz", menuName = "Quiz")]
-public class Quiz : ScriptableObject
+public class QuizObject : ScriptableObject
 {
-    public Question[] questions;
+    public QuestionObject[] questions;
 }

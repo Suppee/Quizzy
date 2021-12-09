@@ -64,7 +64,7 @@
     color: rgb(63, 120, 76);
     font-size: 18px;
     -unity-font-style: bold;
-    -unity-background-image-tint-color: rgba(240, 226, 231, 255);
+    -unity-background-image-tint-color: rgb(240, 226, 231);
 }
 
 .Button:active {
