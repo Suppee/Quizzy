@@ -22,14 +22,14 @@ public class UIController : MonoBehaviour
     {
         if (TouchScreenKeyboard.visible && cooldown == true && TouchScreenKeyboard.isSupported)
         {
-            //keyboard = TouchScreenKeyboard.Open("");
+            keyboard = TouchScreenKeyboard.Open("");
             cooldown = false;
         }
 
         if (keyboard.status == TouchScreenKeyboard.Status.Done && keyboard != null && TouchScreenKeyboard.isSupported)
         {
             OnEnter();
-            //keyboard = TouchScreenKeyboard.Open("");
+            keyboard = TouchScreenKeyboard.Open("");
         }
     }
 
@@ -54,8 +54,8 @@ public class UIController : MonoBehaviour
                     StackSpawner.StartCoroutine(StackSpawner.StackLoop());
 
                 // Give a bonus point if spelled correctly and with upper case
-                if (inputField == GameManager.Instance.questionRef.answers[i])
-                    GameManager.Instance.bonusPoints++; 
+                //if (inputField == GameManager.Instance.questionRef.answers[i])
+                    //GameManager.Instance.rootUIElement.Q<Label>("BonusPoint").
             }
         }
     }
