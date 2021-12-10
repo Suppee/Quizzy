@@ -12,6 +12,8 @@ public class StackBlock : MonoBehaviour
     AudioSource audioOutputSource;    
     private bool playSound = true;
     private Vector3 scaleChange;
+    //Array of colors
+    private Color32[] colors = {new Color32(46, 52, 130, 255), new Color32(0, 100, 144, 255), new Color32(0, 162, 211, 255), new Color32(94, 202, 240, 255), new Color32(0, 178, 190, 255), new Color32(222, 25, 117, 255), new Color32(255, 32, 125, 255), new Color32(250, 77, 167, 255), new Color32(226, 0, 66, 255), new Color32(255, 32, 123, 255), new Color32(254, 70, 58, 255), new Color32(249, 78, 0, 255), new Color32(254, 85, 82, 255), new Color32(253, 121, 96, 255), new Color32(255, 102, 0, 255), new Color32(255, 219, 0, 255), new Color32(253, 229, 0, 255), new Color32(252, 212, 37, 255), new Color32(151, 248, 73, 255), new Color32(255, 252, 1, 255), new Color32(0, 159, 121, 255), new Color32(13, 177, 179, 255), new Color32(0, 207, 213, 255), new Color32(199, 246, 90, 255)};
 
 
     private void Awake()
@@ -26,7 +28,7 @@ public class StackBlock : MonoBehaviour
         transform.localScale = new Vector3(0.1f, 0.5f, 0.1f);
 
         // Set blocks color to a random color
-        gameObject.GetComponent<Renderer>().material.SetColor("_Color", new Color(Random.Range(0, 1f), Random.Range(0, 1f), Random.Range(0, 1f)));
+        gameObject.GetComponent<Renderer>().material.SetColor("_Color", colors[Random.Range(0, colors.Length)]);
 
         // Loads all block clicking sounds
         blockClickSounds = Resources.LoadAll<AudioClip>("Sound effects/BlockClickSounds");
@@ -36,6 +38,7 @@ public class StackBlock : MonoBehaviour
 
         // Disables Grivity after given amount of seconds
         Invoke("disableGravity", disableTime);
+
 
         //Starts Scale() coroutine
         StartCoroutine(Scaler());
