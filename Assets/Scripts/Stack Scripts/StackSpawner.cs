@@ -28,10 +28,13 @@ public class StackSpawner : MonoBehaviour
     // Spawn block co-routine
     public IEnumerator StackLoop()
     {        
-        spawnStack = true;       
+        spawnStack = true;    
+        //runs for as many times as the amount of points earned
         for (int i = 0; i < spawnAmount; i++)
         {
-            yield return new WaitForSeconds(1);            
+            //waits for 1 second
+            yield return new WaitForSeconds(1); 
+            //creates a new block
             Instantiate(stackBlock, transform.position, transform.rotation);
             transform.position += new Vector3(0, stackBlock.transform.localScale.y, 0);
 
