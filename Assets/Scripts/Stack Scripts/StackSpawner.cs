@@ -40,7 +40,7 @@ public class StackSpawner : MonoBehaviour
 
             //Adds points to the player and UI
             GameManager.Instance.points++;
-            GameManager.Instance.rootUIElement.Q<Label>("Points").text = "Score: " + GameManager.Instance.points;
+            GameManager.Instance.rootUIElement.Q<Label>("Points").text = "Points: " + GameManager.Instance.points;
         }    
         // Resets variables when finished
         spawnStack = false;

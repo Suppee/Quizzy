@@ -39,7 +39,7 @@ public class QuizRound : MonoBehaviour
             counter--;
 
             // Show counter number in the Time UI element
-            GameManager.Instance.rootUIElement.Q<Label>("Time").text = "Time: " + counter.ToString();
+            GameManager.Instance.rootUIElement.Q<Label>("Time").text = "Tid: " + counter.ToString();
 
             if (counter == 5)
             {
