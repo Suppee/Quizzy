@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93d69248bcf25894297e14fc76cb9285, type: 3}
-  m_Name: DanskQuiz
+  m_Name: EngelskQuiz
   m_EditorClassIdentifier: 
   questions:
-  - {fileID: 11400000, guid: 8c3521a4070c9924d927a0d08946d9f8, type: 2}
-  - {fileID: 11400000, guid: b29b6dd693f495644971173064aa2240, type: 2}
-  - {fileID: 11400000, guid: 5209d2b1c292f0943b484ea66136bff1, type: 2}
-  - {fileID: 11400000, guid: 6f9f04fbe9ebc954e872b37480fa5d80, type: 2}
+  - {fileID: 11400000, guid: b52c5565ac12a604d8ccb351af5bd51f, type: 2}
+  - {fileID: 11400000, guid: b1cd10542d71ff44a95459eb797e2bcb, type: 2}

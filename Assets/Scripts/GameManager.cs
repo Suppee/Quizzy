@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     // UI References
     public UIDocument UIDocument;    
     public VisualElement rootUIElement;
+    public VisualTreeAsset quizUI;
+    public VisualTreeAsset menuUI;
 
     [HideInInspector]
     public int points;
@@ -37,9 +39,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject floor;
 
-    [HideInInspector]
+    //[HideInInspector]
     public QuestionObject questionRef;
     public QuizObject quizRef;
+    public bool quizStarted;
 
     // Wakey Wakey
     private void Awake()
@@ -54,9 +57,57 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UIDocument.visualTreeAsset = menuUI;
+        rootUIElement = UIDocument.rootVisualElement;
         Color newColor = colors[Random.Range(0, colors.Length)];
         // Sets color on camera background and floor 
         floor.gameObject.GetComponent<Renderer>().material.SetColor("_Color", newColor);
-        Camera.backgroundColor = newColor;        
+        Camera.backgroundColor = newColor;
+        rootUIElement.Q<Button>("DanskQuiz").clicked += DanskQuiz;
+        rootUIElement.Q<Button>("EngelskQuiz").clicked += EQuiz;
+        rootUIElement.Q<Button>("FysikKemiQuiz").clicked += FkQuiz;
+        rootUIElement.Q<Button>("MatematikQuiz").clicked += MQuiz;
+        rootUIElement.Q<Button>("ExitButton").clicked += Application.Quit;
+    }
+
+    public void DanskQuiz()
+    {
+        quizRef = Resources.Load<QuizObject>("Quizzes/DanskQuiz");
+        UIDocument.visualTreeAsset = quizUI;
+        rootUIElement = UIDocument.rootVisualElement;
+        gameObject.GetComponent<QuizRound>().enabled = true;
+        quizStarted = true;
+    }
+
+    public void FkQuiz()
+    {
+        quizRef = Resources.Load<QuizObject>("Quizzes/FysikKemiQuiz");
+        UIDocument.visualTreeAsset = quizUI;
+        rootUIElement = UIDocument.rootVisualElement;
+        gameObject.GetComponent<QuizRound>().enabled = true;
+        quizStarted = true;
+    }
+
+    public void MQuiz()
+    {
+        quizRef = Resources.Load<QuizObject>("Quizzes/MatematikQuiz");
+        UIDocument.visualTreeAsset = quizUI;
+        rootUIElement = UIDocument.rootVisualElement;
+        gameObject.GetComponent<QuizRound>().enabled = true;
+        quizStarted = true;
+    }
+
+    public void EQuiz()
+    {
+        quizRef = Resources.Load<QuizObject>("Quizzes/EngelskQuiz");
+        UIDocument.visualTreeAsset = quizUI;
+        rootUIElement = UIDocument.rootVisualElement;
+        gameObject.GetComponent<QuizRound>().enabled = true;
+        quizStarted = true;
+    }
+
+    public void finishquiz()
+    {
+        Start();
     }
 }

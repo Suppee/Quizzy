@@ -10,11 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a992f104cbed9469401b66226c6d1e, type: 3}
-  m_Name: NewQuestion
+  m_Name: Dansk_Information
   m_EditorClassIdentifier: 
-  question: Hvad hedder jeg?
+  question: "N\xE6vn genretr\xE6k fra genren: Information"
   answers:
-  - Mads
-  - Christian
-  - Anders
-  seconds: 30
+  - Artikler
+  - 'Baggrundsartikel '
+  - Dokumentarfilm
+  - Feature
+  - Interview
+  - 'Nyhedsartikel '
+  - "Portr\xE6tartikel"
+  - Pressefoto
+  - 'Pressemeddelelse '
+  - Reportage
+  - "\xD8jenvidneberetning "
+  - Webdok
+  seconds: 60

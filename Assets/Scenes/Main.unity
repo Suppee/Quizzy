@@ -250,7 +250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &170061704
 MonoBehaviour:
@@ -312,7 +312,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &272162476
 MonoBehaviour:
@@ -373,7 +373,7 @@ Transform:
   - {fileID: 1537929881}
   - {fileID: 1812566180}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -676,11 +676,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 963194227}
   UIDocument: {fileID: 856656276}
+  quizUI: {fileID: 9197481963319205126, guid: 94eefc4efc6921142a284b977798da68, type: 3}
+  menuUI: {fileID: 9197481963319205126, guid: b05be1f39680a374e9f6de63cfe01dbf, type: 3}
   points: 0
   bonusPoints: 0
   floor: {fileID: 134281745}
   questionRef: {fileID: 0}
   quizRef: {fileID: 11400000, guid: b9e3bf6cff110f0428f72b38ab046ce8, type: 2}
+  quizStarted: 0
 --- !u!4 &856656275
 Transform:
   m_ObjectHideFlags: 0
@@ -694,7 +697,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &856656276
 MonoBehaviour:
@@ -710,7 +713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 7da3342a6b007174bbb919ec0cd65ee9, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 94eefc4efc6921142a284b977798da68, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: b05be1f39680a374e9f6de63cfe01dbf, type: 3}
   m_SortingOrder: 0
 --- !u!114 &856656277
 MonoBehaviour:
@@ -719,7 +722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856656273}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27bd902edfdda9745bc8dfaee87bc397, type: 3}
   m_Name: 
