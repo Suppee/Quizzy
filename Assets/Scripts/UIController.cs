@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
     public StackSpawner StackSpawner;
     private TouchScreenKeyboard keyboard;
     public bool cooldown = true;
+    public AudioSource WrongGuess;
+    public AudioSource RightGuess;
 
     // Start is called before the first frame update
     public void Start()
@@ -46,6 +48,7 @@ public class UIController : MonoBehaviour
             //loops for each possible answer from the question ref.
             for (int i = 0; i < GameManager.Instance.questionRef.answers.Length; i++)
             {
+<<<<<<< HEAD
                 //Check if the inputField answer equals the answer at index I, if true score points
                 if (inputField.ToLower() == GameManager.Instance.questionRef.answers[i].ToLower())
                 {
@@ -54,11 +57,24 @@ public class UIController : MonoBehaviour
                     inputField = null;
                     if (StackSpawner.spawnStack == false)
                         StackSpawner.StartCoroutine(StackSpawner.StackLoop());
+=======
+                //plays Right Guess audio
+                RightGuess.Play();
+                //Activates stackSpawner
+                StackSpawner.spawnAmount += GameManager.Instance.questionRef.answers[i].Length;
+                inputField = null;
+                if (StackSpawner.spawnStack == false)
+                    StackSpawner.StartCoroutine(StackSpawner.StackLoop());
+>>>>>>> main
 
                     // Give a bonus point if spelled correctly and with upper case
                     //if (inputField == GameManager.Instance.questionRef.answers[i])
                     //GameManager.Instance.rootUIElement.Q<Label>("BonusPoint").
                 }
+            }
+            else
+            {
+                WrongGuess.Play();
             }
         }
        
